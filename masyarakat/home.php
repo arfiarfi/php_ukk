@@ -61,7 +61,7 @@ $koneksi = mysqli_connect("localhost", "root", "", "db_ukk");
         </div>
     </div>
     <div class="row">
-         <div class="col-md-12 mt-3">
+         <div class="col-md-12 mt-3 mb-5">
         <div class="card" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
             <div class="card-header" style="font-family: fantasy; font-size: 24px; color: #146c43; padding-top: 10px; background: #d1e7dd;  box-shadow: 1px 1px #a3cfbb inset";>
                 RIWAYAT PENGADUAN

@@ -1,7 +1,8 @@
 <style>
   body {
-    background-image: url("https://t3.ftcdn.net/jpg/04/12/82/16/360_F_412821610_95RpjzPXCE2LiWGVShIUCGJSktkJQh6P.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2015/01/31/05/05/background-618226_960_720.png");
     background-size: cover;
+    font-family: Poppins;
 }
 </style>
 <?php
