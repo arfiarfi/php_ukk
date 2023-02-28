@@ -22,19 +22,24 @@
 
                     <?php
                     if ($_SESSION['level'] == 'admin') { ?>
-                        <a class="nav-link" href="index.php?page=pengaduan">Data Pengaduan</a>
-                        <a class="nav-link" href="../config/aksi_logout.php">Keluar</a>
+                        <a class="btn btn-light" href="index.php?page=pengaduan">Data Pengaduan</a>
+                        <a class="btn btn-light" href="index.php?page=tanggapan">Data Tanggapan</a>
+                        <a class="btn btn-light" href="index.php?page=masyarakat">Data Masyarakat</a>
+                        <a class="btn btn-light" href="index.php?page=petugas">Data Petugas</a>
+                        <a class="btn btn-light" href="../config/aksi_logout.php">Keluar</a>
+                        
 
                     <?php } elseif ($_SESSION['level'] == 'petugas') { ?>
-                        <a class="nav-link" href="index.php?page=pengaduan">Data Pengaduan</a>
-                        <a class="nav-link" href="../config/aksi_logout.php">Keluar</a>
+                        <a class="btn btn-light" href="index.php?page=pengaduan">Data Pengaduan</a>
+                        <a class="btn btn-light" href="index.php?page=tanggapan">Data Tanggapan</a>
+                        <a class="btn btn-light" href="../config/aksi_logout.php">Keluar</a>
 
                     <?php } elseif ($_SESSION['level'] == 'masyarakat') { ?>
                         <a class="btn btn-light" href="../config/aksi_logout.php">Keluar</a>
 
                     <?php } else { ?>
-                        <a class="nav-link" href="index.php?page=registrasi">Daftar Akun</a>
-                        <a class="nav-link" href="index.php?page=login">Login</a>
+                        <a class="btn btn-light" href="index.php?page=registrasi">Daftar Akun</a>
+                        <a class="btn btn-light" href="index.php?page=login">Login</a>
 
                     <?php } ?>
 

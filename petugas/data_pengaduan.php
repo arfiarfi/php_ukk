@@ -1,9 +1,8 @@
-
 <div class="container" style="padding-top: 30px;" >
     <div class="row" >
         <div class="col-md-12" mt-3 >
             <div class="card" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"; >
-                <div class="card-header" style="padding-top: 10px; background: #D3D3D3; box-shadow: 5px 10px 20px 	#A8A8A8 inset";>
+                <div class="card-header" style="font-family: Arial Black; color: #146c43; background: #d1e7dd; box-shadow: 1px 1px #a3cfbb inset";>
                     DATA PENGADUAN
                 </div>
                 <div class="card-body">
@@ -46,6 +45,8 @@
                                         ?>
                                     </td>
                                     <td>
+                                        <?php
+                                        if ($data['status'] != 'selesai'){ ?>
                                         <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verifikasi<?php echo $data['id_pengaduan'] ?>">VERIFIKASI</a>
 
                                         <!-- Modal Verifikasi-->
@@ -88,6 +89,13 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <?php } ?>
+
+                                        <?php  
+                                        if ($data['status'] == 'proses') {
+                                        ?>
+
                                         <a href="" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tanggapi<?php echo $data['id_pengaduan'] ?>">TANGGAPI</a>
                                         <!-- Modal Tanggapi-->
                                         <div class="modal fade" id="tanggapi<?php echo $data['id_pengaduan'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -126,19 +134,19 @@
                                                             </div>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="submit" name="kirim" class="btn btn-primary">Tanggapi</button>
+                                                        <button type="submit" name="kirim_tanggapan" class="btn btn-primary">Tanggapi</button>
                                                     </div>
                                                     </form>
 
                                                     <?php
-                                                    if (isset($_POST['kirim'])) {
+                                                    if (isset($_POST['kirim_tanggapan'])) {
                                                         $id_pengaduan = $_POST['id_pengaduan'];
                                                         $id_petugas = $_SESSION['id_petugas'];
                                                         $tanggal = date("Y-m-d");
-                                                        $tanggapan = $_POST['tanggapan'];
+                                                        $tanggapan = htmlspecialchars($_POST['tanggapan']);
                                                         $status = $_POST['status'];
 
-                                                        $query = mysqli_query($koneksi, "INSERT INTO tanggapan VALUES ('','$id_pengaduan','$tanggal','$tanggapan','$id_petugas') ");
+                                                        $query_tanggapan = mysqli_query($koneksi, "INSERT INTO tanggapan VALUES ('','$id_pengaduan','$tanggal','$tanggapan','$id_petugas') ");
                                                         if ($tanggapan != NULL) {
                                                             $update = mysqli_query($koneksi,"UPDATE pengaduan SET status='selesai' WHERE id_pengaduan='$id_pengaduan' ");
                                                         }
@@ -153,6 +161,10 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <?php
+                                        }
+                                        ?>
 
                                         <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $data['id_pengaduan'] ?>">HAPUS</a>
                                         <!-- Modal Hapus-->

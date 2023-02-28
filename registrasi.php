@@ -1,8 +1,8 @@
-<div class="row mt-3">
-    <div class="col-md-4 offset-md-4">
+<div class="row mt-3" style="padding-top: 20px; ">
+    <div class="col-md-4 offset-md-4" >
         <div class="card"  style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
-            <div class="card-header"style="background: #000000; text-align: center;">
-                <h2 style="color: #ffffff;">REGISTRASI</h2>
+            <div class="card-header"style="text-align: center;">
+                <h2 style="font-family: fantasy; font-size: 30px; color: #000000;">REGISTRASI</h2>
             </div>
             <div class="card-body">
                 <form action="" method="POST">
@@ -28,7 +28,7 @@
                     </div>
 
             </div>
-             <div class="card-footer" style="background: #D3D3D3;">
+             <div class="card-footer">
                 <button type="submit" name="kirim" class="btn btn-primary" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">DAFTAR</button>
                 <a href="index.php?page=login" class="m-3" >Sudah Punya Akun? Klik disini!</a>
             </div>

@@ -1,6 +1,6 @@
 <?php
 
-$koneksi = mysqli_connect("localhost","root","","praktik_yoga");
+$koneksi = mysqli_connect("localhost","root","","db_ukk");
 ?>
 
  <div class="container">
@@ -25,25 +25,25 @@ $no4=mysqli_num_rows(mysqli_query($koneksi,"SELECT * FROM `petugas`"));
         <div class="col-md-3 mt-3">
             <div class="card" >
                 <div class="card-header" style=" color: white; background: #FF0000";>Masyarakat</div>
-                <div class="card-body"><?=$no1?></div>
+                <div class="card-body"><?=$no1?> Masyarakat</div>
             </div>
         </div>
         <div class="col-md-3 mt-3">
             <div class="card">
                 <div class="card-header" style="color: white; background: #0000FF";>Pengaduan</div>
-                <div class="card-body"><?=$no2?></div>
+                <div class="card-body"><?=$no2?> Pengaduan</div>
             </div>
         </div>
         <div class="col-md-3 mt-3">
             <div class="card">
                 <div class="card-header" style="color: white; background: purple";>Tanggapan</div>
-                <div class="card-body"><?=$no3?></div>
+                <div class="card-body"><?=$no3?> Tanggapan</div>
             </div>
         </div>
         <div class="col-md-3 mt-3">
             <div class="card">
                 <div class="card-header" style="color: white; background: green";>Petugas</div>
-                <div class="card-body"><?=$no4?></div>
+                <div class="card-body"><?=$no4?> Petugas</div>
             </div>
         </div>
     </div>

@@ -31,7 +31,6 @@ session_start();
     } else {
         include 'home.php';
     }
-
     include '../layouts/footer.php';
  ?>
 

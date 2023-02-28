@@ -17,7 +17,7 @@
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
         <div class="container">
             <a class="navbar-brand" href="index.php">Aplikasi Pengaduan Masyarakat</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,9 +55,9 @@
     }
     ?>
 
-<footer class="footer py-2 bg-light fixed-bottom" style="box-shadow: 0 -1px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+<footer class="footer py-2 bg-light fixed-bottom" >
     <div class="container">
-        <p class="text-center">UKK RPL 2023 | YOGA | SMKN 2 Magelang</p>
+        <p class="text-center">©Copyright © 2023 UKK SMK N 2 Magelang.By Akbar Firmansyah.</p>
     </div>
 </footer>
 

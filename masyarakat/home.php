@@ -1,34 +1,34 @@
 <?php
-$koneksi = mysqli_connect("localhost", "root", "", "praktik_yoga");
+$koneksi = mysqli_connect("localhost", "root", "", "db_ukk");
 ?>
 <div class="container">
     <div class="row">
         <div class="col-md-12" mt-3 >
         <div class="col-md-12" mt-3 style="padding-top: 20px;  text-align: center; color: #585858">    
         <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">SELAMAT DATANG!</h4>
-  <p style="font-size: 20px;"><?php echo $_SESSION['username']; ?></p>
+  <h4 class="alert-heading">SELAMAT DATANG!</h4>    
+  <p style="font-size: 20px; "><b><?php echo $_SESSION['nama']; ?></b></p>
   <hr>
   <p class="mb-0">Aplikasi Pengaduan Berfungsi Sebagai Sarana mengadukan Sesuatu.</p>
 </div>
 <hr>
 </div>
             <div class="card" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
-            <div class="card-header" style="background: #D3D3D3; box-shadow: 5px 10px 20px 	#A8A8A8 inset";>
+            <div class="card-header" style="font-family: fantasy; font-size: 24px; color: #146c43; background: #d1e7dd; box-shadow: 1px 1px #a3cfbb inset";>
                 FORM PENGADUAN
      </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label class="form-label">JUDUL LAPORAN</label>
+                            <label class="form-label" style="font-weight: bold;">JUDUL LAPORAN</label>
                             <input type="text" class="form-control" name="judul_laporan" placeholder="Masukkan Judul" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Isi Laporan</label>
+                            <label class="form-label" style="font-weight: bold; padding-top: 10px; ">ISI LAPORAN</label>
                             <textarea class="form-control" name="isi_laporan" placeholder="Masukkan Isi Laporan" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Foto</label>
+                            <label class="form-label" style="font-weight: bold;">FOTO</label>
                             <input type="file" class="form-control" name="foto" required>
                         </div>
                 </div>
@@ -40,9 +40,9 @@ $koneksi = mysqli_connect("localhost", "root", "", "praktik_yoga");
                 include '../config/koneksi.php';
                 $tanggal = date("Y-m-d");
                 if (isset($_POST['kirim'])) {
-                    $nik = $_SESSION['nik'];
-                    $judul_laporan = $_POST['judul_laporan'];
-                    $isi_laporan = $_POST['isi_laporan'];
+                    $nik = htmlspecialchars($_SESSION['nik']);
+                    $judul_laporan = htmlspecialchars($_POST['judul_laporan']);
+                    $isi_laporan = htmlspecialchars($_POST['isi_laporan']);
                     $status = 0;
                     $foto = $_FILES['foto']['name'];
                     $tmp = $_FILES['foto']['tmp_name'];
@@ -63,7 +63,7 @@ $koneksi = mysqli_connect("localhost", "root", "", "praktik_yoga");
     <div class="row">
          <div class="col-md-12 mt-3">
         <div class="card" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
-            <div class="card-header" style="padding-top: 10px; background: #D3D3D3; box-shadow: 5px 10px 20px 	#A8A8A8 inset";>
+            <div class="card-header" style="font-family: fantasy; font-size: 24px; color: #146c43; padding-top: 10px; background: #d1e7dd;  box-shadow: 1px 1px #a3cfbb inset";>
                 RIWAYAT PENGADUAN
                 </div>
                 <div class="card-body">
